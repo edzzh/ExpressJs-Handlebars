@@ -14,8 +14,10 @@ app.get('/', (req, res) => {
 	}
 	var templateData = {
 		year: new Date().getFullYear(),
-		article: 'Template will be right in the <code>views/</code> folder and layouts need to be in the <code>views/layouts/</code> folder'
+		article: 'Template will be right in the <code>views/</code> folder and layouts need to be in the <code>views/layouts/</code> folder',
+		info: 'My name is <h4>' + requestData.identity + '</h4>'
 	}
+
 	res.render('home', templateData);
 });
 
